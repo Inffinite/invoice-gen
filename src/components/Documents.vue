@@ -86,6 +86,7 @@
               />
             </svg>
             <input
+              v-model="search"
               type="text"
               placeholder="Search by client name"
               class="d-input"
@@ -97,14 +98,17 @@
           <div v-for="(d, i) in data" :key="i" class="d-item">
             <div class="d-client">
               {{ d.client }}
-              
             </div>
             <div class="d-actions">
               <div class="d-date">{{ genDate(d.createdAt) }}</div>
-              
-              <div @click="createInv(d.items, d.client)" class="d-gen">Invoice</div>
 
-              <div @click="createQuote(d.items, d.client)" class="d-gen">Quote</div>
+              <div @click="createInv(d.items, d.client)" class="d-gen">
+                Invoice
+              </div>
+
+              <div @click="createQuote(d.items, d.client)" class="d-gen">
+                Quote
+              </div>
             </div>
           </div>
         </div>
@@ -120,6 +124,7 @@ import moment from 'moment'
 export default {
   data() {
     return {
+      search: null,
       items: [
         {
           client: "Tawi Paints",
@@ -139,9 +144,16 @@ export default {
   },
 
   computed: {
-    data: () => {
-        return store.getters.getData
-    }
+    data(){
+       var all = store.getters.getData
+        if(this.search){
+          return all.filter((item) => {
+            return this.search.toLowerCase().split(' ').every(v => item.client.toLowerCase().includes(v))
+          })
+        } else {
+          return store.getters.getData
+        }
+    },
   },
 
   methods: {
