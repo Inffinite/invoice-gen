@@ -19,7 +19,7 @@ export default {
 
     actions: {
         getDataState({ commit }) {
-            axios.get(`http://192.168.0.25:3000/documents`)
+            axios.get(`https://peaceful-beyond-71732.herokuapp.com/documents`)
             .then((res) => {
                 console.log(res.data)
                 commit('SET_DATA_STATE', res.data)

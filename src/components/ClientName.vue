@@ -144,7 +144,7 @@ export default {
       if (items.length <= 0) {
         alert("You cannot generate a quotation with no items!");
       } else {
-        axios.post('http://localhost:3000/addDoc', {
+        axios.post('https://peaceful-beyond-71732.herokuapp.com/addDoc', {
           client: store.getters.getClientName,
           docType: store.getters.getFileName,
           grandTotal: store.getters.getTotal,
