@@ -152,11 +152,13 @@ export default {
         })
         .then(() => {
           console.log("[+] Saved!")
+          store.dispatch("getDataState")
         })
         .catch((e) => {
           console,log(e)
         })
         
+        store.dispatch("getDataState")
         await store.dispatch("changeInfoPageState", false);
         await store.dispatch("changePreviewState", true);
       }

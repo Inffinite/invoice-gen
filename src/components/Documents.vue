@@ -97,9 +97,11 @@
           <div v-for="(d, i) in data" :key="i" class="d-item">
             <div class="d-client">
               {{ d.client }}
-              <div class="d-date">{{ genDate(d.createdAt) }}</div>
+              
             </div>
             <div class="d-actions">
+              <div class="d-date">{{ genDate(d.createdAt) }}</div>
+              
               <div @click="createInv(d.items, d.client)" class="d-gen">Invoice</div>
 
               <div @click="createQuote(d.items, d.client)" class="d-gen">Quote</div>

@@ -48,7 +48,7 @@
 }
 
 .docs-icon {
-    stroke: var(--black-faded);
+    stroke: var(--black);
     height: 32px;
 }
 
@@ -132,6 +132,7 @@
     color: var(--black);
     font-size: 16px;
     padding: 6px 20px;
+    font-weight: 600;
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
