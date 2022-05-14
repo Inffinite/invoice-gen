@@ -146,7 +146,7 @@ export default {
 
   methods: {
     genDate(date){
-        return moment(date).format("MMMM Do YYYY")
+        return moment(date).format("MMMM Do h:mm a")
     },
 
     genInv() {
