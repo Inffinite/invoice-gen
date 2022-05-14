@@ -1,0 +1,9 @@
+:root {
+    --black: #110f0eff;
+    --black-faded: rgba(17, 15, 14, 0.523);
+    --red: #ec1d27ff;
+    --ig-white: #f7f7f7;
+    --white: white;
+    --blue: #324ba6ff;
+    --faded-grey: rgba(128, 128, 128, 0.089);
+}
