@@ -15,6 +15,7 @@
         </div>
 
         <div @click="addName" class="addbtn">Save</div>
+        <div @click="back" class="backbtn">Back to documents</div>
       </div>
 
       <div v-if="addItemsView">
@@ -136,6 +137,11 @@ export default {
         this.quantity = "";
         this.price = "";
       }
+    },
+
+    back(){
+      store.dispatch("changeInfoPageState", false);
+      store.dispatch("changeDocumentsPageState", true);
     },
 
     async generate() {

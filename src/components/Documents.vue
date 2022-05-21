@@ -95,6 +95,9 @@
         </div>
 
         <div class="my-docs">
+          <div v-if="data.length <= 0" class="none">
+            woohoo
+          </div>
           <div v-for="(d, i) in data" :key="i" class="d-item">
             <div class="d-client">
               {{ d.client }}
