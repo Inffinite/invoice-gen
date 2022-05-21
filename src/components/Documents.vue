@@ -1,4 +1,8 @@
 <template>
+<div>
+  <div class="mobile-text">
+    Access on desktop only!
+  </div>
   <div class="docs-wr">
     <div
       style="
@@ -117,6 +121,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </template>
 

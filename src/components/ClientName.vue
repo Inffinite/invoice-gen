@@ -78,6 +78,7 @@
           </svg>
           Generate quote
         </div>
+        <div @click="back" class="backbtn">Back to documents</div>
       </div>
     </div>
   </div>
